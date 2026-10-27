@@ -66,7 +66,13 @@ export function Services() {
                 transition={{ duration: 0.7, delay: (i % 4) * 0.08, ease }}
               >
                 <div className="service-media">
-                  <Image src={service.image} alt={service.alt} fill sizes="(max-width: 680px) 100vw, 25vw" />
+                  <Image
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    sizes="(max-width: 680px) 100vw, 25vw"
+                    style={service.position ? { objectPosition: service.position } : undefined}
+                  />
                   <span className="service-tag">{service.category} services</span>
                 </div>
                 <div className="service-card-content">

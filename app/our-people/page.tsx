@@ -4,7 +4,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { StackCards } from "@/components/StackCards";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
-import { photos, workforce } from "@/lib/content";
+import { gallery, photos, realPhotos, workforce } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Our People" };
 
@@ -29,7 +29,7 @@ export default function PeoplePage() {
       <section className="section">
         <div className="container split">
           <Reveal from="right" className="split-media">
-            <Image src={photos.team} alt="Nimbus team members working together" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src={realPhotos.teamMeeting} alt="Nimbus managers in a planning meeting" fill sizes="(max-width: 900px) 100vw, 50vw" />
           </Reveal>
           <Reveal from="left" className="split-copy">
             <span className="eyebrow">Our workforce</span>
@@ -76,6 +76,25 @@ export default function PeoplePage() {
               <StaggerItem key={c.title} className="check-card">
                 <h3>{c.title}</h3>
                 <p>{c.text}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="section paper">
+        <div className="container">
+          <Reveal className="section-heading">
+            <span className="eyebrow">On site</span>
+            <h2>Our teams at work.</h2>
+            <p>Real Nimbus people, on real client sites, every day.</p>
+          </Reveal>
+          <Stagger className="gallery-grid">
+            {gallery.map((photo) => (
+              <StaggerItem key={photo.src} className="gallery-item">
+                <div className="gallery-media" style={{ aspectRatio: `${photo.width} / ${photo.height}` }}>
+                  <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 680px) 50vw, 33vw" />
+                </div>
               </StaggerItem>
             ))}
           </Stagger>

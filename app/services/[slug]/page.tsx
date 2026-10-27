@@ -35,7 +35,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         eyebrow={`Service ${group.number}`}
         title={group.title}
         text={group.tagline}
-        image={group.image}
+        image={group.cover ?? group.image}
         crumbs={[{ label: "Services", href: "/services" }, { label: group.title }]}
       />
 

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { SmartImage as Image } from "@/components/SmartImage";
 import Link from "next/link";
 import { useRef } from "react";
-import { photos, whyPoints } from "@/lib/content";
+import { realPhotos, whyPoints } from "@/lib/content";
 import { Reveal, Stagger, StaggerItem } from "./motion";
 
 const words = ["Smart.", "Strategic.", "Efficient.", "Reliable.", "Innovative."];
@@ -19,8 +19,8 @@ export function Why({ teaser = false }: { teaser?: boolean }) {
       <div className="why-photo">
         <motion.div className="parallax" style={{ y: imageY }}>
           <Image
-            src={photos.officeHall}
-            alt="Well-managed contemporary office interior"
+            src={realPhotos.facadeCleaning}
+            alt="Nimbus rope-access team cleaning a glass facade"
             fill
             sizes="(max-width: 680px) 100vw, 50vw"
           />

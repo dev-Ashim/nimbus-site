@@ -32,6 +32,33 @@ export const photos = {
   waterHands: img("1538300342682-cf57afb97285"),
 };
 
+/** Real photos of Nimbus teams on site, served from /public/photos. */
+export const realPhotos = {
+  panelInspection: "/photos/panel-inspection.png",
+  facadeCleaning: "/photos/facade-cleaning.png",
+  gardener: "/photos/gardener.png",
+  pestControl: "/photos/pest-control.png",
+  electricalAudit: "/photos/electrical-audit.png",
+  valveMaintenance: "/photos/valve-maintenance.png",
+  bmsMonitoring: "/photos/bms-monitoring.png",
+  officePresentation: "/photos/office-presentation.png",
+  officeTeam: "/photos/office-team.png",
+  teamMeeting: "/photos/team-meeting.png",
+};
+
+export const gallery = [
+  { src: realPhotos.facadeCleaning, width: 814, height: 1123, alt: "Nimbus rope-access team cleaning a glass facade" },
+  { src: realPhotos.electricalAudit, width: 666, height: 516, alt: "Nimbus technician and supervisor auditing an electrical panel" },
+  { src: realPhotos.gardener, width: 328, height: 376, alt: "Nimbus gardener tending a landscaped bed" },
+  { src: realPhotos.bmsMonitoring, width: 635, height: 180, alt: "Nimbus engineers reviewing a building management system screen" },
+  { src: realPhotos.pestControl, width: 350, height: 842, alt: "Nimbus pest control operator spraying in protective gear" },
+  { src: realPhotos.officePresentation, width: 732, height: 449, alt: "Nimbus team in a review presentation" },
+  { src: realPhotos.panelInspection, width: 302, height: 394, alt: "Nimbus technician inspecting an LT panel" },
+  { src: realPhotos.valveMaintenance, width: 187, height: 370, alt: "Technician operating a pipeline gate valve" },
+  { src: realPhotos.officeTeam, width: 576, height: 352, alt: "Nimbus back-office team at work" },
+  { src: realPhotos.teamMeeting, width: 576, height: 317, alt: "Nimbus managers in a planning meeting" },
+];
+
 export const contact = {
   phones: [
     { label: "+91 91510 53438", href: "tel:+919151053438" },
@@ -117,6 +144,8 @@ export type ServiceGroup = {
   short: string;
   tagline: string;
   image: string;
+  /** Wide, high-resolution photo for the page hero; falls back to `image`. */
+  cover?: string;
   intro: string[];
   items: { title: string; text: string }[];
   highlights: string[];
@@ -129,7 +158,8 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Hard Services",
     short: "MEP, HVAC, fire safety, and planned maintenance that keep building systems running safely.",
     tagline: "Building systems that perform, day and night.",
-    image: photos.electrician,
+    image: realPhotos.electricalAudit,
+    cover: photos.electrician,
     intro: [
       "Your building’s systems are its heartbeat. Our skilled technicians look after mechanical, electrical, and plumbing infrastructure with planned preventive maintenance and fast breakdown response, so small issues never become big disruptions.",
       "Through our value engineering approach, we also look for ways to reduce energy and water consumption, lowering operating costs while extending the life of your assets.",
@@ -150,7 +180,8 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Soft Services",
     short: "Housekeeping, pest control, waste management, and landscaping for healthier, welcoming spaces.",
     tagline: "Clean, healthy spaces people love to be in.",
-    image: photos.housekeeping,
+    image: realPhotos.facadeCleaning,
+    cover: photos.housekeeping,
     intro: [
       "First impressions are built on cleanliness. Our trained housekeeping teams, equipped with modern tools and eco-friendly products, keep offices, hospitals, residential societies, schools, and retail spaces spotless and hygienic.",
       "From daily janitorial care to pest control, waste management, and landscaping, we take care of every detail that makes a space feel safe, fresh, and well looked after.",
@@ -192,7 +223,8 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Premium Services",
     short: "Property management, facility audits, and front desk teams for a complete, integrated solution.",
     tagline: "One partner for every part of your facility.",
-    image: photos.handshake,
+    image: realPhotos.officePresentation,
+    cover: photos.handshake,
     intro: [
       "Our premium services bring everything together. We work closely with your HR, IT, and operations teams to align facility services with your business strategy.",
       "With strategically relevant KPIs, detailed audits, and professional front-of-house teams, we help you deliver measurable value and a better experience for everyone who uses your space.",
@@ -250,20 +282,24 @@ export const services: {
   text: string;
   image: string;
   alt: string;
+  /** CSS object-position, for tall photos cropped into the wide card. */
+  position?: string;
 }[] = [
   {
     title: "Housekeeping & janitorial",
     category: "Soft",
     text: "Thorough cleaning and hygiene for offices, hospitals, schools, and residential communities.",
-    image: photos.vacuum,
-    alt: "Floor being vacuumed",
+    image: realPhotos.facadeCleaning,
+    alt: "Nimbus rope-access team cleaning a glass facade",
+    position: "center 35%",
   },
   {
     title: "Mechanical, electrical & plumbing",
     category: "Hard",
     text: "Skilled support for electrical, HVAC, plumbing, fire safety, and building systems.",
-    image: photos.electrician,
-    alt: "Technician servicing an electrical panel",
+    image: realPhotos.panelInspection,
+    alt: "Nimbus technician inspecting an LT panel",
+    position: "center 30%",
   },
   {
     title: "Security guards & surveillance",
@@ -276,15 +312,16 @@ export const services: {
     title: "Landscaping & horticulture",
     category: "Soft",
     text: "Garden care, planting, and landscape maintenance for healthy, welcoming outdoor spaces.",
-    image: photos.lawn,
-    alt: "Well-kept lawn at a modern property",
+    image: realPhotos.gardener,
+    alt: "Nimbus gardener tending a landscaped bed",
   },
   {
     title: "Pest control & sanitization",
     category: "Soft",
     text: "Responsible pest management and sanitization programs for safe environments.",
-    image: photos.gloves,
-    alt: "Hands putting on protective gloves",
+    image: realPhotos.pestControl,
+    alt: "Nimbus pest control operator spraying in protective gear",
+    position: "center 20%",
   },
   {
     title: "Waste management & green cleaning",
@@ -297,8 +334,8 @@ export const services: {
     title: "Property management & facility audits",
     category: "Premium",
     text: "Audits, reporting, and property oversight measured against KPIs that matter.",
-    image: photos.signing,
-    alt: "Signing facility audit documents",
+    image: realPhotos.electricalAudit,
+    alt: "Nimbus supervisor auditing an electrical installation",
   },
   {
     title: "Front desk & reception",

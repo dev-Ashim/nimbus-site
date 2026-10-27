@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { SmartImage as Image } from "@/components/SmartImage";
 import Link from "next/link";
 import { useRef } from "react";
-import { contact, photos } from "@/lib/content";
+import { contact, realPhotos } from "@/lib/content";
 import { Counter, Reveal, Stagger, StaggerItem } from "./motion";
 
 const highlights = [
@@ -30,8 +30,8 @@ export function About({ teaser = false }: { teaser?: boolean }) {
             <div className="about-image">
               <motion.div className="parallax" style={{ y: imageY }}>
                 <Image
-                  src={photos.corridor}
-                  alt="Bright, professionally maintained modern workplace"
+                  src={realPhotos.officePresentation}
+                  alt="Nimbus team in a review presentation"
                   fill
                   sizes="(max-width: 680px) 100vw, 50vw"
                 />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact, serviceGroups } from "@/lib/content";
 import { Brand } from "./Brand";
@@ -63,8 +64,23 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <p>© {new Date().getFullYear()} Nimbus Facility Management. All rights reserved.</p>
-        <Link href="/contact">Contact us →</Link>
+        <p>
+          © {new Date().getFullYear()} Nimbus Facility Management. All rights reserved.{" "}
+          <Link href="/contact">Contact us →</Link>
+        </p>
+        <a
+          className="footer-credit"
+          href="https://upgrate.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Powered by Upgrate (opens upgrate.in)"
+        >
+          <span className="footer-credit-label">Powered by</span>
+          <span className="footer-credit-chip">
+            <Image src="/brand/upgrate-logo.png" alt="Upgrate" width={461} height={176} />
+            <span className="footer-credit-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
       </div>
     </footer>
   );
