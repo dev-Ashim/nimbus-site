@@ -1,0 +1,1699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Nimbus Facility Management delivers integrated hard, soft, security, and premium facility services across India."
+    />
+    <meta name="theme-color" content="#102f56" />
+    <title>Nimbus Facility Management | Your Assets, Our Responsibility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --navy: #102f56;
+        --navy-deep: #0a2343;
+        --orange: #e45b05;
+        --orange-dark: #c94b00;
+        --ink: #172433;
+        --muted: #647181;
+        --paper: #f7f7f4;
+        --white: #fff;
+        --line: #e3e7ea;
+        --font-body: "DM Sans", sans-serif;
+        --font-display: "Manrope", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--white);
+        font-family: var(--font-body);
+        line-height: 1.65;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        color: #eaf0f6;
+        background: var(--navy-deep);
+        font-size: 0.78rem;
+      }
+
+      .topbar-inner {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .topbar-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+      }
+
+      .topbar a:hover {
+        color: #ff9a54;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgb(255 255 255 / 96%);
+        border-bottom: 1px solid rgb(16 47 86 / 8%);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-wrap {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        flex-shrink: 0;
+      }
+
+      .brand-mark {
+        position: relative;
+        width: 42px;
+        height: 34px;
+        display: inline-block;
+      }
+
+      .brand-mark::before,
+      .brand-mark::after {
+        position: absolute;
+        width: 24px;
+        height: 14px;
+        content: "";
+        transform: skew(-38deg);
+      }
+
+      .brand-mark::before {
+        top: 3px;
+        left: 3px;
+        background: var(--navy);
+        border-radius: 9px 3px 9px 3px;
+      }
+
+      .brand-mark::after {
+        right: 2px;
+        bottom: 3px;
+        background: var(--orange);
+        border-radius: 3px 9px 3px 9px;
+      }
+
+      .brand-name {
+        display: block;
+        color: var(--navy);
+        font: 800 1.08rem/1 var(--font-display);
+        letter-spacing: 0.07em;
+      }
+
+      .brand-subtitle {
+        display: block;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        line-height: 1;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(18px, 2.5vw, 35px);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0.86rem;
+        font-weight: 600;
+      }
+
+      .nav-links a {
+        transition: color 160ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--orange);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 22px;
+        border: 0;
+        border-radius: 4px;
+        background: var(--orange);
+        color: var(--white);
+        cursor: pointer;
+        font-size: 0.88rem;
+        font-weight: 700;
+        transition:
+          background 160ms ease,
+          transform 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        background: var(--orange-dark);
+      }
+
+      .button-light {
+        background: var(--white);
+        color: var(--navy);
+      }
+
+      .button-light:hover {
+        background: #edf2f7;
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--navy);
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin: 5px 0;
+        background: currentColor;
+      }
+
+      .hero {
+        position: relative;
+        min-height: min(740px, calc(100svh - 120px));
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: var(--navy-deep);
+        color: var(--white);
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-position: center 45%;
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(90deg, rgb(8 28 52 / 88%) 0%, rgb(8 28 52 / 68%) 45%, rgb(8 28 52 / 12%) 100%),
+          linear-gradient(0deg, rgb(8 28 52 / 34%), transparent 50%);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: min(720px, 100%);
+        padding-block: 100px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--orange);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 28px;
+        height: 2px;
+        content: "";
+        background: currentColor;
+      }
+
+      .hero .eyebrow {
+        color: #ff914d;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 25px 0 20px;
+        font-size: clamp(3rem, 7vw, 5.85rem);
+        font-weight: 700;
+        letter-spacing: -0.065em;
+        line-height: 1.02;
+      }
+
+      h1 span {
+        color: #ff7b26;
+      }
+
+      .hero-copy {
+        max-width: 570px;
+        margin-bottom: 32px;
+        color: rgb(255 255 255 / 85%);
+        font-size: clamp(1rem, 1.5vw, 1.13rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+      }
+
+      .hero-note {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        min-width: 280px;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 24px;
+        background: var(--orange);
+        color: var(--white);
+      }
+
+      .hero-note strong {
+        display: block;
+        font: 800 1.8rem/1 var(--font-display);
+      }
+
+      .hero-note span {
+        font-size: 0.8rem;
+      }
+
+      .hero-note .note-icon {
+        font-size: 1.8rem;
+      }
+
+      .intro {
+        padding-block: 76px;
+        background: var(--paper);
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.7fr;
+        align-items: center;
+        gap: 55px;
+      }
+
+      .intro h2 {
+        margin: 14px 0 0;
+        color: var(--navy);
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        letter-spacing: -0.055em;
+        line-height: 1.1;
+      }
+
+      .intro-copy {
+        padding-left: 32px;
+        border-left: 3px solid var(--orange);
+        color: #4b5865;
+        font-size: 1.04rem;
+      }
+
+      .intro-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section {
+        padding-block: 100px;
+      }
+
+      .section-heading {
+        max-width: 660px;
+        margin-bottom: 48px;
+      }
+
+      .section-heading h2 {
+        margin: 12px 0 14px;
+        color: var(--navy);
+        font-size: clamp(2.2rem, 4.5vw, 3.65rem);
+        letter-spacing: -0.06em;
+        line-height: 1.1;
+      }
+
+      .section-heading p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        align-items: center;
+        gap: 72px;
+      }
+
+      .about-image-wrap {
+        position: relative;
+        min-height: 530px;
+      }
+
+      .about-image {
+        position: absolute;
+        inset: 0 30px 32px 0;
+        width: calc(100% - 30px);
+        height: calc(100% - 32px);
+      }
+
+      .about-image-accent {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 58%;
+        height: 46%;
+        border: 12px solid var(--white);
+        background: var(--orange);
+        z-index: -1;
+      }
+
+      .experience-card {
+        position: absolute;
+        right: 0;
+        top: 32px;
+        padding: 18px 22px;
+        background: var(--orange);
+        color: var(--white);
+      }
+
+      .experience-card strong {
+        display: block;
+        font: 800 2rem/1.1 var(--font-display);
+      }
+
+      .experience-card span {
+        font-size: 0.78rem;
+      }
+
+      .about-copy h2 {
+        margin: 14px 0 22px;
+        color: var(--navy);
+        font-size: clamp(2.15rem, 4vw, 3.5rem);
+        letter-spacing: -0.06em;
+        line-height: 1.09;
+      }
+
+      .about-copy p {
+        color: var(--muted);
+      }
+
+      .check-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 20px;
+        margin: 25px 0 29px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .check-list li {
+        display: flex;
+        gap: 10px;
+        color: var(--ink);
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .check-list li::before {
+        content: "✓";
+        color: var(--orange);
+        font-weight: 800;
+      }
+
+      .mission-section {
+        padding-block: 0 100px;
+      }
+
+      .mission-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+
+      .mission-card {
+        padding: 38px 36px;
+        background: var(--navy);
+        color: var(--white);
+      }
+
+      .mission-card:nth-child(2) {
+        background: var(--orange);
+      }
+
+      .mission-card .eyebrow {
+        color: rgb(255 255 255 / 80%);
+      }
+
+      .mission-card p {
+        margin: 14px 0 0;
+        font: 600 clamp(1.05rem, 1.8vw, 1.3rem)/1.5 var(--font-display);
+      }
+
+      .services-section {
+        background: var(--paper);
+      }
+
+      .scope {
+        margin-top: 48px;
+        padding: 34px 36px;
+        background: var(--white);
+        border: 1px solid #e8ebed;
+      }
+
+      .scope h3 {
+        margin: 0 0 18px;
+        color: var(--navy);
+        font-size: 1.2rem;
+      }
+
+      .scope .check-list {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .service-card {
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid #e8ebed;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 38px rgb(16 47 86 / 10%);
+      }
+
+      .service-card img {
+        height: 220px;
+      }
+
+      .service-card-content {
+        padding: 24px 24px 27px;
+      }
+
+      .service-number {
+        color: var(--orange);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .service-card h3 {
+        margin: 8px 0 10px;
+        color: var(--navy);
+        font-size: 1.22rem;
+        letter-spacing: -0.03em;
+      }
+
+      .service-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .service-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 19px;
+        color: var(--orange-dark);
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .service-link:hover {
+        color: var(--navy);
+      }
+
+      .service-link span {
+        transition: transform 160ms ease;
+      }
+
+      .service-link:hover span {
+        transform: translateX(4px);
+      }
+
+      .why-section {
+        padding-block: 0;
+        background: var(--navy);
+        color: var(--white);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 70px;
+      }
+
+      .why-photo {
+        height: 100%;
+        min-height: 580px;
+      }
+
+      .why-copy {
+        padding-block: 78px;
+      }
+
+      .why-copy .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .why-copy .section-heading h2 {
+        color: var(--white);
+      }
+
+      .why-copy .section-heading p {
+        color: #c4cfda;
+      }
+
+      .why-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px 28px;
+      }
+
+      .why-point {
+        padding-top: 15px;
+        border-top: 1px solid rgb(255 255 255 / 23%);
+      }
+
+      .why-point strong {
+        display: block;
+        margin-bottom: 7px;
+        color: #ff8a3d;
+        font: 700 1rem var(--font-display);
+      }
+
+      .why-point p {
+        margin: 0;
+        color: #cfdae4;
+        font-size: 0.86rem;
+      }
+
+      .values-section {
+        background: var(--white);
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+
+      .value-card {
+        min-height: 210px;
+        padding: 25px 21px;
+        border: 1px solid var(--line);
+        border-top: 3px solid var(--orange);
+      }
+
+      .value-icon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        margin-bottom: 17px;
+        border-radius: 50%;
+        background: #fff1e8;
+        color: var(--orange-dark);
+        font-size: 1.2rem;
+      }
+
+      .value-card h3 {
+        margin: 0 0 8px;
+        color: var(--navy);
+        font-size: 1rem;
+      }
+
+      .value-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .quote-section {
+        padding-block: 78px;
+        background: #f5f6f7;
+      }
+
+      .quote-box {
+        position: relative;
+        max-width: 920px;
+        margin-inline: auto;
+        padding: 45px 54px;
+        border-left: 4px solid var(--orange);
+        background: var(--white);
+        box-shadow: 0 14px 40px rgb(16 47 86 / 5%);
+      }
+
+      .quote-mark {
+        position: absolute;
+        top: 14px;
+        right: 28px;
+        color: #f5dfd0;
+        font: 800 5rem/1 var(--font-display);
+      }
+
+      .quote-box blockquote {
+        position: relative;
+        margin: 13px 0 23px;
+        color: var(--navy);
+        font: 600 clamp(1.1rem, 2.4vw, 1.55rem)/1.55 var(--font-display);
+      }
+
+      .quote-author {
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .quote-author strong {
+        display: block;
+        color: var(--ink);
+      }
+
+      .clients-section {
+        padding-block: 68px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .clients-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 32px;
+      }
+
+      .clients-head h2 {
+        margin: 10px 0 0;
+        color: var(--navy);
+        font-size: clamp(1.9rem, 3vw, 2.7rem);
+        letter-spacing: -0.05em;
+      }
+
+      .clients-head p {
+        max-width: 400px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .client-types {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border: 1px solid var(--line);
+      }
+
+      .client-types span {
+        display: grid;
+        min-height: 82px;
+        place-items: center;
+        padding: 10px;
+        color: #526170;
+        font: 700 0.88rem var(--font-display);
+        text-align: center;
+      }
+
+      .client-types span + span {
+        border-left: 1px solid var(--line);
+      }
+
+      .contact-section {
+        position: relative;
+        overflow: hidden;
+        padding-block: 88px;
+        background: var(--orange);
+        color: var(--white);
+      }
+
+      .contact-section::after {
+        position: absolute;
+        top: -130px;
+        right: -70px;
+        width: 400px;
+        height: 400px;
+        border: 1px solid rgb(255 255 255 / 22%);
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 40px rgb(255 255 255 / 6%),
+          0 0 0 80px rgb(255 255 255 / 5%);
+      }
+
+      .contact-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .contact-grid .eyebrow {
+        color: rgb(255 255 255 / 82%);
+      }
+
+      .contact-grid h2 {
+        max-width: 700px;
+        margin: 13px 0 12px;
+        font-size: clamp(2.3rem, 4.5vw, 4rem);
+        letter-spacing: -0.06em;
+        line-height: 1.08;
+      }
+
+      .contact-grid p {
+        max-width: 620px;
+        margin-bottom: 0;
+        color: rgb(255 255 255 / 86%);
+      }
+
+      .contact-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 40px;
+        padding-block: 34px;
+      }
+
+      .contact-item span {
+        display: block;
+        margin-bottom: 4px;
+        color: #9aa8b6;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-item a,
+      .contact-item address {
+        color: var(--white);
+        font-size: 0.94rem;
+        font-style: normal;
+      }
+
+      .contact-item a:hover {
+        color: #ff9a54;
+      }
+
+      .footer {
+        padding-block: 28px;
+        background: var(--navy-deep);
+        color: #c4cfda;
+        font-size: 0.78rem;
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .footer .brand-name {
+        color: var(--white);
+      }
+
+      .footer .brand-subtitle {
+        color: #aebdcb;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      .back-to-top {
+        display: inline-flex;
+        gap: 7px;
+        align-items: center;
+        color: var(--white);
+      }
+
+      .back-to-top:hover {
+        color: #ff9a54;
+      }
+
+      @media (max-width: 900px) {
+        .nav-wrap {
+          gap: 18px;
+        }
+
+        .nav-links {
+          gap: 16px;
+          font-size: 0.8rem;
+        }
+
+        .nav-wrap > .button {
+          display: none;
+        }
+
+        .about-grid {
+          gap: 44px;
+        }
+
+        .about-image-wrap {
+          min-height: 460px;
+        }
+
+        .service-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .why-grid {
+          gap: 40px;
+        }
+
+        .values-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .scope .check-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .container {
+          width: min(100% - 36px, 540px);
+        }
+
+        .topbar-inner {
+          justify-content: center;
+          min-height: 34px;
+        }
+
+        .topbar-inner > span {
+          display: none;
+        }
+
+        .topbar-contact {
+          justify-content: center;
+          gap: 15px;
+          font-size: 0.72rem;
+        }
+
+        .nav-wrap {
+          min-height: 70px;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 8px 18px 16px;
+          background: var(--white);
+          border-bottom: 1px solid var(--line);
+          box-shadow: 0 18px 25px rgb(16 47 86 / 8%);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-links a {
+          display: block;
+          padding: 12px 0;
+          border-bottom: 1px solid #eef0f2;
+          font-size: 0.92rem;
+        }
+
+        .hero {
+          min-height: 690px;
+          min-height: min(720px, calc(100svh - 100px));
+        }
+
+        .hero-image {
+          object-position: 58% center;
+        }
+
+        .hero::after {
+          background: linear-gradient(90deg, rgb(8 28 52 / 86%), rgb(8 28 52 / 48%));
+        }
+
+        .hero-content {
+          padding-block: 70px 115px;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 13vw, 4.8rem);
+        }
+
+        .hero-note {
+          min-width: 0;
+          left: 18px;
+          right: 18px;
+          justify-content: center;
+          padding: 15px 18px;
+        }
+
+        .intro {
+          padding-block: 55px;
+        }
+
+        .intro-grid,
+        .about-grid,
+        .why-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .intro-grid {
+          gap: 24px;
+        }
+
+        .intro-copy {
+          padding-left: 19px;
+        }
+
+        .section {
+          padding-block: 68px;
+        }
+
+        .section-heading {
+          margin-bottom: 32px;
+        }
+
+        .about-grid {
+          gap: 38px;
+        }
+
+        .about-image-wrap {
+          min-height: 390px;
+        }
+
+        .about-image {
+          inset: 0 20px 25px 0;
+          width: calc(100% - 20px);
+          height: calc(100% - 25px);
+        }
+
+        .experience-card {
+          top: 20px;
+          padding: 13px 16px;
+        }
+
+        .experience-card strong {
+          font-size: 1.6rem;
+        }
+
+        .check-list,
+        .scope .check-list,
+        .mission-grid {
+          grid-template-columns: 1fr;
+          gap: 9px;
+        }
+
+        .mission-section {
+          padding-bottom: 68px;
+        }
+
+        .mission-grid {
+          gap: 14px;
+        }
+
+        .mission-card,
+        .scope {
+          padding: 28px 22px;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .service-card img {
+          height: 215px;
+        }
+
+        .why-grid {
+          gap: 0;
+        }
+
+        .why-photo {
+          min-height: 350px;
+          max-height: 420px;
+        }
+
+        .why-copy {
+          padding-block: 55px 65px;
+        }
+
+        .why-points {
+          gap: 20px;
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+
+        .value-card {
+          min-height: 195px;
+          padding: 20px 16px;
+        }
+
+        .quote-section {
+          padding-block: 55px;
+        }
+
+        .quote-box {
+          padding: 34px 25px;
+        }
+
+        .quote-mark {
+          right: 16px;
+        }
+
+        .clients-head {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .client-types {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .client-types span {
+          min-height: 68px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .client-types span + span {
+          border-left: 0;
+        }
+
+        .client-types span:nth-child(even) {
+          border-left: 1px solid var(--line);
+        }
+
+        .contact-section {
+          padding-block: 62px;
+        }
+
+        .contact-grid {
+          gap: 24px;
+        }
+
+        .contact-details {
+          grid-template-columns: 1fr;
+          gap: 17px;
+          padding-block: 28px;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-contact">
+          <a href="tel:+919151053438">+91 91510 53438</a>
+          <a href="mailto:support@nimbusfacility.in">support@nimbusfacility.in</a>
+        </div>
+        <span>Reliable facility management, built around you.</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="container nav-wrap" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Nimbus Facility Management home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>
+            <span class="brand-name">NIMBUS</span>
+            <span class="brand-subtitle">FACILITY MANAGEMENT</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-nimbus">Why Nimbus</a></li>
+          <li><a href="#values">Our values</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="button" href="#contact">Talk to our team <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
+          alt="Modern commercial buildings in a city"
+          fetchpriority="high"
+        />
+        <div class="container">
+          <div class="hero-content">
+            <span class="eyebrow">Integrated facility management</span>
+            <h1 id="hero-title">Your assets.<br /><span>Our responsibility.</span></h1>
+            <p class="hero-copy">
+              Smart, strategic, and reliable facility solutions that keep your people,
+              places, and operations at their best.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#services">Explore our services <span aria-hidden="true">→</span></a>
+              <a class="button button-light" href="#about">Discover Nimbus</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-note">
+          <span class="note-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>20+ years</strong>
+            <span>of facility management experience</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" aria-label="Welcome to Nimbus">
+        <div class="container intro-grid">
+          <div>
+            <span class="eyebrow">Welcome to Nimbus</span>
+            <h2>Spaces that work better. Every day.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Welcome to Nimbus Facility Management — where your assets are in good
+              hands and your spaces are managed with excellence. We bring together
+              trained people, proven practices, and thoughtful technology to create
+              safer, cleaner, more efficient environments.
+            </p>
+            <p>
+              We look forward to serving you with the highest level of expertise and
+              customer care.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-image-wrap">
+            <img
+              class="about-image"
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85"
+              alt="Bright, professionally maintained modern workplace"
+              loading="lazy"
+            />
+            <div class="about-image-accent" aria-hidden="true"></div>
+            <div class="experience-card">
+              <strong>20+</strong>
+              <span>years of experience</span>
+            </div>
+          </div>
+          <div class="about-copy">
+            <span class="eyebrow">About Nimbus</span>
+            <h2>We make complex operations feel effortless.</h2>
+            <p>
+              Nimbus Facility Management is a trusted name in integrated facility
+              services, delivering excellence with precision, professionalism, and
+              passion. Since our inception, we have helped businesses, residential
+              communities, institutions, and industrial facilities create clean, safe,
+              efficient, and well-managed environments.
+            </p>
+            <p>
+              Our trained professionals provide end-to-end solutions tailored to each
+              client — from daily housekeeping to technical maintenance and security.
+              We don’t just maintain spaces; we nurture environments where people can
+              live and work better.
+            </p>
+            <p>
+              Our workforce of trained housekeeping staff, professional security
+              personnel, skilled technicians, and experienced supervisors works in
+              sync to provide 24x7 support, equipped with the latest tools and
+              training.
+            </p>
+            <ul class="check-list">
+              <li>Trained, supported teams</li>
+              <li>Solutions shaped around you</li>
+              <li>Safety-led service delivery</li>
+              <li>Reliable 24/7 support</li>
+            </ul>
+            <a class="button" href="#contact">Get to know us <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission-section" aria-label="Our mission and vision">
+        <div class="container mission-grid">
+          <article class="mission-card">
+            <span class="eyebrow">Our mission</span>
+            <p>
+              To deliver reliable, cost-effective, and high-quality facility
+              management services that exceed client expectations while ensuring the
+              highest standards of safety, hygiene, and sustainability.
+            </p>
+          </article>
+          <article class="mission-card">
+            <span class="eyebrow">Our vision</span>
+            <p>
+              To be India’s most preferred facility management partner, recognized
+              for our innovation, ethical practices, and commitment to operational
+              excellence.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What we do</span>
+            <h2>One partner. Complete peace of mind.</h2>
+            <p>
+              From essential daily care to complex building systems, our integrated
+              services are designed to protect your assets and keep your workplace
+              running smoothly.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+                alt="Professional cleaning tools ready for facility housekeeping"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">01 / SOFT SERVICES</span>
+                <h3>Housekeeping &amp; hygiene</h3>
+                <p>
+                  Thorough cleaning and sanitization for offices, hospitals, schools,
+                  residential communities, and more.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
+                alt="Technician working on building electrical equipment"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">02 / HARD SERVICES</span>
+                <h3>Technical &amp; MEP maintenance</h3>
+                <p>
+                  Skilled support for electrical, HVAC, plumbing, fire safety, and
+                  building management systems.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=80"
+                alt="Secure access control equipment in a modern building"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">03 / SECURITY</span>
+                <h3>Security &amp; surveillance</h3>
+                <p>
+                  Professional security personnel and site-focused systems to help
+                  protect people, property, and operations.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=80"
+                alt="Landscaped garden maintained around a modern property"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">04 / GROUNDS</span>
+                <h3>Landscaping &amp; horticulture</h3>
+                <p>
+                  Garden care, planting, and landscape maintenance that keep outdoor
+                  spaces healthy, welcoming, and beautiful.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=900&q=80"
+                alt="Worker wearing protective equipment on a facility site"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">05 / HEALTH &amp; SAFETY</span>
+                <h3>Pest control &amp; sanitization</h3>
+                <p>
+                  Responsible pest management and hygiene programs to support safe,
+                  healthy, and comfortable environments.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
+                alt="Modern office reception and shared workplace"
+                loading="lazy"
+              />
+              <div class="service-card-content">
+                <span class="service-number">06 / PREMIUM SERVICES</span>
+                <h3>Front desk &amp; property support</h3>
+                <p>
+                  Reception, property management, facility audits, waste management,
+                  and responsive on-site assistance.
+                </p>
+                <a class="service-link" href="#contact">Discuss this service <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="scope">
+            <h3>Our complete scope of services</h3>
+            <ul class="check-list">
+              <li>Housekeeping &amp; janitorial services</li>
+              <li>Security guards &amp; surveillance</li>
+              <li>Mechanical, electrical &amp; plumbing (MEP)</li>
+              <li>Pest control &amp; sanitization</li>
+              <li>Waste management &amp; green cleaning</li>
+              <li>Landscaping &amp; horticulture</li>
+              <li>Property management &amp; facility audits</li>
+              <li>Front desk &amp; reception</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-section" id="why-nimbus">
+        <div class="container why-grid">
+          <img
+            class="why-photo"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85"
+            alt="Well-managed contemporary office interior"
+            loading="lazy"
+          />
+          <div class="why-copy">
+            <div class="section-heading">
+              <span class="eyebrow">Why Nimbus</span>
+              <h2>Smart. Strategic. Efficient. Reliable. Innovative.</h2>
+              <p>
+                We work alongside your HR, IT, and operations teams to make facility
+                management a strategic advantage — not just another task.
+              </p>
+              <p>
+                With over 20 years of experience designing, implementing, and
+                maintaining major facility projects, our value engineering approach
+                helps clients reach optimal operating costs through smart use of
+                resources, including energy and water.
+              </p>
+            </div>
+            <div class="why-points">
+              <div class="why-point">
+                <strong>Better workplaces</strong>
+                <p>Support employee productivity, wellbeing, and innovation.</p>
+              </div>
+              <div class="why-point">
+                <strong>Measurable outcomes</strong>
+                <p>Use relevant KPIs to track service quality and performance.</p>
+              </div>
+              <div class="why-point">
+                <strong>Smarter operations</strong>
+                <p>Improve agility and the everyday experience for your people.</p>
+              </div>
+              <div class="why-point">
+                <strong>Sustainable value</strong>
+                <p>Manage resources thoughtfully to optimize operating costs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section values-section" id="values">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What guides us</span>
+            <h2>Good service starts with good values.</h2>
+            <p>
+              The standards we share with our clients and our teams shape every
+              relationship, decision, and service we deliver.
+            </p>
+          </div>
+          <div class="values-grid">
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true">◇</span>
+              <h3>Integrity</h3>
+              <p>We work with honesty, transparency, and responsibility.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true">✦</span>
+              <h3>Excellence</h3>
+              <p>We keep improving service delivery and client satisfaction.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true">◎</span>
+              <h3>Teamwork</h3>
+              <p>Collaboration is the foundation of our strength and success.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true">♡</span>
+              <h3>Client-first</h3>
+              <p>We listen, understand, and act in our clients’ best interests.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true">⌁</span>
+              <h3>Sustainability</h3>
+              <p>We prioritize responsible practices for a better tomorrow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" aria-label="A message from our leadership">
+        <div class="container">
+          <div class="quote-box">
+            <span class="eyebrow">A message from our chairman</span>
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <blockquote>
+              One of the keys to success in facilities management is earning the
+              confidence, respect, and trust of both customers and employees. At
+              Nimbus, we believe quality solutions and lifelong relationships begin
+              with sharing the same high standards.
+            </blockquote>
+            <div class="quote-author">
+              <strong>Chairman</strong>
+              Nimbus Facility Management
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients-section" aria-labelledby="clients-title">
+        <div class="container">
+          <div class="clients-head">
+            <div>
+              <span class="eyebrow">Our clients</span>
+              <h2 id="clients-title">Trusted across industries.</h2>
+            </div>
+            <p>
+              We partner with organizations of every size to keep their environments
+              running at their best.
+            </p>
+          </div>
+          <div class="client-types" aria-label="Industries we serve">
+            <span>Corporate offices</span>
+            <span>Residential communities</span>
+            <span>Healthcare</span>
+            <span>Retail &amp; commercial</span>
+            <span>Industrial &amp; education</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <span class="eyebrow">Let’s work together</span>
+            <h2>Your next facility partner is here.</h2>
+            <p>
+              Tell us about your site and your needs. Our team is ready to find a
+              dependable solution that works for you.
+            </p>
+          </div>
+          <a class="button button-light" href="mailto:support@nimbusfacility.in?subject=Facility%20management%20enquiry">
+            Start a conversation <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="contact-details">
+          <div class="contact-item">
+            <span>Call us</span>
+            <a href="tel:+919151053438">+91 91510 53438</a><br />
+            <a href="tel:+919151805904">+91 91518 05904</a>
+          </div>
+          <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:support@nimbusfacility.in">support@nimbusfacility.in</a>
+          </div>
+          <div class="contact-item">
+            <span>Visit us</span>
+            <address>4/ Anand Lok Colony, Chinhat, Faizabad Road, Lucknow, Uttar Pradesh 226028</address>
+          </div>
+          <div class="contact-item">
+            <span>Our promise</span>
+            <address>Your assets, our responsibility.</address>
+          </div>
+        </div>
+        <div class="footer-inner">
+          <a class="brand" href="#top" aria-label="Nimbus Facility Management home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>
+              <span class="brand-name">NIMBUS</span>
+              <span class="brand-subtitle">FACILITY MANAGEMENT</span>
+            </span>
+          </a>
+          <p>© <span id="current-year">2026</span> Nimbus Facility Management. All rights reserved.</p>
+          <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector("#primary-navigation");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+        navigation.classList.toggle("is-open", !isOpen);
+      });
+
+      navigation.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          navigation.classList.remove("is-open");
+        }
+      });
+
+      document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
